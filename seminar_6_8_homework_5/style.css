@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src: url(./styles/Gilroy-Regular.woff);
+}
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url(./styles/Gilroy-Bold.woff);
+}
+
+body {
+    /* background: #020A18; */
+    margin: 0 auto;
+
+}
+
+/* 
+.center {
+    padding-left: calc(50% - 573px);
+    padding-right: calc(50% - 573px);
+}
+
+.top {
+    width: 100%;
+    padding-bottom: 99px;
+
+}
+
+.header {
+    padding-top: 39px;
+    padding-bottom: 39px;
+}
+
+.top_content {
+    margin-top: 160px;
+    margin-bottom: 197px;
+}
+
+.subtitle {
+    margin-bottom: 10px;
+}
+
+.title {
+    margin-bottom: 40px;
+}
+
+.top_buttons {
+    margin-top: 50px;
+}
+
+.perspectives {
+    display: grid;
+    border-radius: 10px;
+    padding: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 264px;
+    margin-bottom: 243px;
+}
+
+.subtitle_perspective {
+    color: #FFF;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+    opacity: 0.7;
+}
+
+.content_perspective {
+    color: #FFF;
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+    opacity: 0.7;
+}
+
+.big_item {
+    display: grid;
+    justify-items: center;
+    grid-column: span 2;
+    grid-row: span 2;
+    gap: 60px
+}
+
+.perspective {
+    display: grid;
+    justify-items: center;
+    background: #132035;
+    border-radius: 10px;
+    padding: 30px;
+    gap: 30px
+} */
+
+
+
+/*____________________*/
+/*HOMEWORK AFTER SEMINAR 9*/
+
+.content_futures {
+    background: #FFF;
+}
+
+.wrap_futures {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 140px;
+    padding-bottom: 100px;
+    padding-left: calc(50% - 555px);
+    padding-right: calc(50% - 555px);
+}
+
+.item_futures {
+    width: 27.93%;
+}
+
+.item_futures img {
+    padding-bottom: 25px;
+}
+
+.title_items_future {
+    color: #000;
+    font-family: Gilroy-Bold;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 17px;
+}
+
+.info_items_future {
+    color: #666;
+    font-family: Gilroy-Regular;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    padding-bottom: 25px;
+}
+
+.read_more {
+    color: #000;
+    font-family: Gilroy-Bold;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.middle_item {
+    box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
+    padding-bottom: 25px;
+}
+
+.content_reasons {
+    background: #FAFAFA;
+}
+
+.wrap_reasons {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+    text-align: center;
+}
+
+.title_reasons {
+    color: #000;
+    font-family: Gilroy-Bold;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 19px;
+    padding-top: 92px;
+}
+
+.info_reasons {
+    color: #666;
+    text-align: center;
+    font-family: Gilroy-Regular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    padding-bottom: 54px;
+}
+
+.wrap_items_reason {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 100px;
+}
+
+.subtitle_reasons {
+    color: #000;
+    font-family: Gilroy-Bold;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 22px;
+}
+
+.items_reasons {
+    background: #FFF;
+    padding-bottom: 50px;
+}
+
+.info_reason {
+    width: 80.52%;
+    margin: 0 auto;
+    color: #AAA;
+    font-family: Gilroy-Regular;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    padding-bottom: 39px;
+}
+
+.middle_reason_item {
+    box-shadow: 15px 25px 60px -5px rgba(0, 0, 0, 0.10);
+
+}
+
+.learn_more {
+    color: #FFF;
+    text-align: center;
+    font-family: Gilroy-Bold;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    padding: 15px 36px 15px 46px;
+    background: #F25822;
+    cursor: pointer;
+    border-radius: 50px;
+    text-decoration: none;
+
+}
+
+.learn_more img {
+    padding-left: 6px;
+}
