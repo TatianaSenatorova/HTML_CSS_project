@@ -270,7 +270,7 @@ summary::-webkit-details-marker {
 }
 
 .product-box {
-  padding-bottom: 96px;
+  margin-bottom: 96px;
 }
 
 .product-box__heading {
@@ -302,6 +302,7 @@ summary::-webkit-details-marker {
   -ms-flex-pack: center;
   justify-content: center;
   gap: 30px;
+  margin-bottom: 48px;
 }
 
 .product {
@@ -709,6 +710,26 @@ summary::-webkit-details-marker {
   top: 365px;
 }
 
+.button_browse {
+  text-decoration: none;
+  display: block;
+  width: fit-content;
+  color: #F26376;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: 1px solid rgba(255, 106, 106, 1);
+  padding: 15px 39px;
+  text-align: center;
+  margin: 0 auto;
+}
+.button_browse:hover{
+  background: rgba(255, 106, 106, 1);
+  color: white;
+}
+
 .slider__arrow:hover path {
   fill: #F16D7F;
 }
@@ -848,6 +869,7 @@ summary::-webkit-details-marker {
   line-height: normal;
   opacity: 0.671;
   padding-left: 22px;
+  padding-right: 22px;
   background: #E1E1E1;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -946,9 +968,15 @@ summary::-webkit-details-marker {
     gap: 20px;
   }
 
+  .product-box {
+    margin-bottom: 64.5px;
+  }
+
   .product-box__content {
     gap: 16px;
     margin-top: 73px;
+    margin-bottom: 32px;
+  
   }
 
   .advantages {
@@ -1030,14 +1058,19 @@ summary::-webkit-details-marker {
     object-fit: cover;
   }
 
-  .product-box {
+  /* .product-box {
     padding-bottom: 40px;
+  } */
+  .product-box {
+    margin-bottom: 96px;
   }
+
 
   .product-box__content {
     margin-top: 64px;
     grid-template-columns: 1fr;
     gap: 16px;
+    margin-bottom: 40px;
   }
 
   .advantages {
