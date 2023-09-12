@@ -1,0 +1,207 @@
+@import 'mixins';
+@import 'vars';
+
+.cart__top {
+    background: #F8F3F4;
+    margin-bottom: 96px;
+
+    &_title {
+        min-height: 148px;
+        color: $colorSitePink;
+        @include font_style($fontSize: 24px, $fontWeight: 400);
+        @include flex_style();
+    }
+}
+
+.cart__form {
+    margin-bottom: 128px;
+    width: 100%;
+    @include flex_style($alignItems: flex-start);
+
+    &_left {
+        width: 57.19%;
+    }
+
+    &_right {
+        width: 360px;
+        padding-top: 17px;
+    }
+
+    &_items {
+        @include flex_style($flexDirection: column, $gap: 40px, $alignItems: flex-start);
+        width: 100%;
+        margin-bottom: 72px;
+    }
+
+    &_item:hover &_item_content_firm,
+    &_item:hover &_item_content_title {
+        color: $colorSitePink;
+    }
+
+    &_item {
+        width: 100%;
+        @include flex_style($justifyContent: start, $alignItems: flex-start);
+        box-shadow: 14px 14px 31px 10px rgba(87, 87, 87, 0.15);
+
+        &_link {
+            cursor: pointer;
+            display: block;
+            max-width: 40.18%;
+        }
+
+        &_box_price {
+            @include flex_style($gap: 24px, $justifyContent: start);
+        }
+
+        &_quantity {
+            text-align: center;
+            width: 44px;
+            height: 25px;
+            border: 1px solid #EAEAEA;
+            color: $colorGrey;
+            @include font_style($fontSize: 18px, $fontWeight: 400);
+        }
+
+        &_img {
+            object-fit: cover;
+        }
+
+        &_content {
+            width: 59.82%;
+
+            padding: 22px 22px 54px 31px;
+
+            &_firm,
+            &_title {
+                @include font_style($fontSize: 24px, $fontWeight: 400);
+                color: #222;
+            }
+
+            &_title {
+                margin-bottom: 42px;
+                transition: all 0.3s;
+            }
+
+            &_firm {
+                @include flex_style();
+                transition: all 0.3s;
+            }
+
+            &_info {
+                @include font_style($fontSize: 22px, $fontWeight: 400);
+                color: $colorGrey;
+                margin-bottom: 6px;
+            }
+
+            &_color,
+            &_size {
+                color: $colorLightGrey;
+            }
+
+            &_price {
+                color: $colorSitePink;
+            }
+
+            &_color,
+            &_size,
+            &_price {
+                margin-left: 6px;
+            }
+        }
+
+
+    }
+
+    &_buttons {
+        @include flex_style();
+    }
+
+    &_button {
+        font-family: 'Lato', sans-serif;
+        /*почему-то к кнопке не применился шрифт*/
+        padding: 15.5px 40px;
+        min-height: 50px;
+        border: 1px solid #A4A4A4;
+        background: #fff;
+        color: #000000;
+        @include font_style();
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+
+    &_button:hover {
+        background: $colorSitePink;
+        color: white;
+    }
+
+    &_address {
+        width: 100%;
+        @include flex_style($flexDirection: column, $gap: 20.5px, $alignItems: flex-start);
+        margin-bottom: 57px;
+
+        &_title {
+            color: #000000;
+            @include font_style($fontSize: 16px);
+        }
+
+        &_input {
+            padding: 13px 17px 16px 17px;
+            width: 100%;
+            min-height: 45px;
+            border: 1px solid #A4A4A4;
+        }
+
+        &_dicount {
+            min-height: 35px;
+            padding: 11px 15px;
+            border: 1px solid #A4A4A4;
+            @include flex_style();
+            transition: all 0.3s;
+        }
+
+        &_dicount:hover {
+            color: white;
+            background: $colorSitePink;
+        }
+    }
+    &_check{
+        width: 100%;
+        padding: 39px 34px 42px;
+        background: #F5F3F3;
+        @include flex_style($flexDirection: column, $alignItems: flex-end);
+        &_subtitle{
+            @include flex_style($flexWrap: nowrap);
+            margin-bottom: 12px;
+        }
+        &_title{
+            @include flex_style($flexWrap: nowrap);
+            margin-bottom: 21px;
+            
+        }
+        &_line{
+            border: 1px solid #E2E2E2;
+            width: 273px;
+            margin-bottom: 17px;
+        }
+        &_button{
+            padding: 15px 42px;
+            background: $colorSitePink;
+            color: white;
+            border:1px solid  $colorSitePink;
+            transition: all 0.3s;
+            align-self: center;
+        }
+        &_button:hover{
+            background: white;
+            color: $colorSitePink;
+           
+        }
+        &_summ{
+            margin-left: 12px;
+        }
+    }
+
+
+
+
+}

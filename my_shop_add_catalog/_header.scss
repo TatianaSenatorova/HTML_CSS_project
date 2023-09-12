@@ -1,53 +1,44 @@
 @import 'vars';
 @import 'mixins';
 
-@-webkit-keyframes slide-left {
+@keyframes fade-in-right {
     0% {
+        -webkit-transform: translateX(50px);
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
         -webkit-transform: translateX(0);
         transform: translateX(0);
+        opacity: 1;
     }
-
-    100% {
-        -webkit-transform: translateX(-232px);
-        transform: translateX(-232px);
-    }
+ 
 }
-
-@keyframes slide-left {
-    0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-
-    100% {
-        -webkit-transform: translateX(-232px);
-        transform: translateX(-232px);
-    }
-}
-
-
 .box-content {
     overflow: hidden;
 }
-
 .header {
     background: #353333;
     position: relative;
-
     &__top {
         min-height: 75px;
         @include flex_style();
     }
-
     &__left {
         @include flex_style($alignItems: flex-end, $gap: 41px);
     }
-
     &__right {
         margin-right: 11px;
         @include flex_style($gap: 33px);
     }
+    &__icon{
+        cursor: pointer;
+    }
+    &__icon:hover path{
+        fill: $colorSitePink;
+    }
 }
+
 
 .nav {
     background: #ffffff;
@@ -56,35 +47,28 @@
     position: absolute;
     top: 75px;
     right: 0px;
-    transition: all 1s linear;
-
+    transition: all 0.3s linear;
+    display: none;
+    z-index: 2;
     & ul {
         list-style: none;
         @include flex_style($flexDirection: column, $gap: 11px, $alignItems: flex-start);
     }
-
     &__menu_title_position li {
         @include flex_style($flexDirection: column, $gap: 11px, $alignItems: flex-start);
     }
-
     &__menu {
         color: #000;
         @include font_style($fontWeight: 700);
-
     }
-
     &__menu_title {
         color: $colorSitePink;
         @include font_style($fontWeight: 400);
     }
-
     &__menu_item {
         color: #6F6E6E;
-
         @include font_style($fontWeight: 400);
-
     }
-
     &__menu_title_first {
         margin-bottom: 4px;
     }
@@ -95,34 +79,21 @@
     position: absolute;
     left: -9999999px;
     visibility: hidden;
-
     &:checked~.nav {
-            
-        animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
+        display: block;
+        animation: fade-in-right 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     }
 }
-
-// .nav{
-//     position: absolute;
-//     right: -9999999px;
-//     visibility: hidden; 
-// }
-
 @media(max-width: 767px) {
-
     .header__link-site {
         display: none;
     }
-
     .burger {
         display: block;
     }
-
     .header__left {
         margin-left: 16px;
     }
-
     .header__right {
         margin-right: 16px;
     }

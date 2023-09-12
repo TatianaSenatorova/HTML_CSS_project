@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main page</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,900&family=Roboto&display=swap"
         rel="stylesheet">
-
 </head>
 
 <body>
@@ -91,171 +90,126 @@
                 </nav>
             </div>
         </header>
-        <section class="promo">
-            <div class="promo__img"><img class="main_picture" src="./img/main_picture (2).png" alt="Man in a coat">
+        <section class="cart">
+            <div class="cart__top">
+                <h1 class="cart__top_title center">SHOPPING CART</h1>
             </div>
-            <div class="promo__content">
-                <div class="promo__info">
-                    <h1 class="promo__title">THE BRAND</h1>
-                    <h2 class="promo__heading_left">OF LUXURY <span class="promo__heading_right">FASHION</span></h2>
-                </div>
+            <div class="cart_content center">
+                <form class="cart__form" action="#">
+                    <div class="cart__form_left">
+                        <div class="cart__form_items">
+                            <div class="cart__form_item">
+                                <a class="cart__form_item_link" href="#"><img class="cart__form_item_img"
+                                        src="./img/sport_jacket_men.png" alt="sport sweater"></a>
+                                <div class="cart__form_item_content">
+                                    <h2 class="cart__form_item_content_firm">MANGO PEOPLE <svg width="18" height="18"
+                                            viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z"
+                                                fill="#575757" />
+                                        </svg>
+                                    </h2>
+                                    <h2 class="cart__form_item_content_title">T-SHIRT</h2>
+                                    <p class="cart__form_item_content_info">Price: <span
+                                            class="cart__form_item_content_price">$300</span></p>
+                                    <p class="cart__form_item_content_info">Color: <span
+                                            class="cart__form_item_content_color">Red</span></p>
+                                    <p class="cart__form_item_content_info">Size:<span
+                                            class="cart__form_item_content_size">Xl</span></p>
+
+                                    <div class="cart__form_item_box_price">
+                                        <p class="cart__form_item_content_info">Quantity: </p>
+                                        <input class="cart__form_item_quantity" type="number" min="1" max="200"
+                                            value="1" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cart__form_item">
+                                <a class="cart__form_item_link" href="#"><img class="cart__form_item_img"
+                                        src="./img/img_catalog/catalog_foto2.png" alt="sport sweater"></a>
+                                <div class="cart__form_item_content">
+                                    <h2 class="cart__form_item_content_firm">MANGO PEOPLE <svg width="18" height="18"
+                                            viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z"
+                                                fill="#575757" />
+                                        </svg>
+                                    </h2>
+                                    <h2 class="cart__form_item_content_title">T-SHIRT</h2>
+                                    <p class="cart__form_item_content_info">Price: <span
+                                            class="cart__form_item_content_price">$300</span></p>
+                                    <p class="cart__form_item_content_info">Color: <span
+                                            class="cart__form_item_content_color">Red</span></p>
+                                    <p class="cart__form_item_content_info">Size:<span
+                                            class="cart__form_item_content_size">Xl</span></p>
+
+                                    <div class="cart__form_item_box_price">
+                                        <p class="cart__form_item_content_info">Quantity: </p>
+                                        <input class="cart__form_item_quantity" type="number" min="1" max="200"
+                                            value="1" pattern="[0-9]*">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="cart__form_buttons">
+
+                            <button class="cart__form_button" type="reset">CLEAR SHOPPING CART</button>
+                            <a class="cart__form_button" href="./catalog.html">CONTINUE SHOPPING</a>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="cart__form_right">
+                        <div class="cart__form_address">
+                            <h3 class="cart__form_address_title">SHIPPING ADRESS</h3>
+                            <input class="cart__form_address_input" type="text" placeholder="Bangladesh">
+                            <input class="cart__form_address_input" type="text" placeholder="State">
+                            <input class="cart__form_address_input" type="text" placeholder="Postcode / Zip">
+                            <div class="cart__form_address_dicount">GET A QUOTE</div>
+                        </div>
+                        <div class="cart__form_check">
+                            <h4 class="cart__form_check_subtitle">SUB TOTAL <span class="cart__form_check_summ">$900</span>
+                            </h4>
+                            <h2 class="cart__form_check_title">SUB TOTAL <span class="cart__form_check_summ">$900</span>
+                            </h2>
+                            <div class="cart__form_check_line"></div>
+                            <button class="cart__form_check_button" type="submit">PROCEED TO CHECKOUT</button>
+
+
+                        </div>
+
+                    </div>
+                </form>
+
+
+
             </div>
-        </section>
-        <section class="sale center">
-            <div class="sale__item">
-                <a class="sale__item_link" href="#"><img class="sale__foto" src="./img/clothes_for_women.png"
-                        alt="woman"></a>
-                <div class="sale__content">
-                    <h4 class="sale__text">30% OFF</h4>
-                    <h2 class="sale__heading">FOR WOMEN</h2>
-                </div>
-            </div>
-            <div class="sale__item">
-                <a class="sale__item_link" href="#"><img class="sale__foto" src="./img/clothes_for_men (2).png"
-                        alt="man"></a>
-                <div class="sale__content">
-                    <div class="sale__text">HOT DEAL</div>
-                    <div class="sale__heading">FOR MEN</div>
-                </div>
-            </div>
-            <div class="sale__item">
-                <a class="sale__item_link" href="#"><img class="sale__foto" src="./img/clothes_for_children.png"
-                        alt="child"></a>
-                <div class="sale__content">
-                    <h4 class="sale__text">NEW ARRIVALS</h4>
-                    <h2 class="sale__heading">FOR KIDS</h2>
-                </div>
-            </div>
-            <div class="sale__item big_item">
-                <a class="sale__item_link big_item_link" href="#"><img class="sale__foto" big_foto_sale"
-                        src="./img/accsessories.png" alt="accsessories"></a>
-                <div class="sale__content">
-                    <h4 class="sale__text">LUXIROUS & TRENDY</h4>
-                    <h2 class="sale__heading">ACCESORIES</h2>
-                </div>
-            </div>
+
 
         </section>
-        <section class="product-box center">
-            <h3 class="product-box__heading">Fetured Items</h3>
-            <p class="product-box__text">Shop for items based on what we featured in this week</p>
-            <div class="product-box__content">
-                <div class="product">
-                 
-                        <img class="product__img" src="./img/jacket_for_men.png" alt="jacket for men">
-                 
-                    <div class="product__content">
-                        <h3 class="product__heading">ELLERY X M'O CAPSULE</h3>
-                        <p class="product__text">Known for her sculptural takes on traditional tailoring, Australian
-                            arbiter
-                            of
-                            cool Kym Ellery teams up with Moda Operandi.</p>
-                        <p class="product__price">$52.00</p>
-                    </div>
 
-                </div>
-                <div class="product">
-                    <img class="product__img" src="./img/central_foto.png" alt="suit">
-                    <div class="product__content">
-                        <h3 class="product__heading">ELLERY X M'O CAPSULE</h3>
-                        <p class="product__text">Known for her sculptural takes on traditional tailoring, Australian
-                            arbiter
-                            of
-                            cool Kym Ellery teams up with Moda Operandi.</p>
-                        <p class="product__price">$52.00</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <img class="product__img" src="./img/sport_jacket_men.png" alt="sport jacket men">
-                    <div class="product__content">
-                        <h3 class="product__heading">ELLERY X M'O CAPSULE</h3>
-                        <p class="product__text">Known for her sculptural takes on traditional tailoring, Australian
-                            arbiter
-                            of
-                            cool Kym Ellery teams up with Moda Operandi.</p>
-                        <p class="product__price">$52.00</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <img class="product__img" src="./img/t_shirt_men.png" alt="t_shirt">
-                    <div class="product__content">
-                        <h3 class="product__heading">ELLERY X M'O CAPSULE</h3>
-                        <p class="product__text">Known for her sculptural takes on traditional tailoring, Australian
-                            arbiter
-                            of
-                            cool Kym Ellery teams up with Moda Operandi.</p>
-                        <p class="product__price">$52.00</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <img class="product__img" src="./img/blue_jacket_women.png" alt="blue jacke">
-                    <div class="product__content">
-                        <h3 class="product__heading">ELLERY X M'O CAPSULE</h3>
-                        <p class="product__text">Known for her sculptural takes on traditional tailoring, Australian
-                            arbiter
-                            of
-                            cool Kym Ellery teams up with Moda Operandi.</p>
-                        <p class="product__price">$52.00</p>
-                    </div>
-                </div>
-                <div class="product">
-                    <img class="product__img" src="./img/stripy_blouse_women.png" alt="stripy blouse">
-                    <div class="product__content">
-                        <h3 class="product__heading">ELLERY X M'O CAPSULE</h3>
-                        <p class="product__text">Known for her sculptural takes on traditional tailoring, Australian
-                            arbiter
-                            of
-                            cool Kym Ellery teams up with Moda Operandi.</p>
-                        <p class="product__price">$52.00</p>
-                    </div>
 
-                </div>
 
-            </div>
-            <a class="button_browse" href="#">Browse All Product</a>
 
-        </section>
-        <div class="advantages center">
-            <article class="advantages__item">
-                <img class="advantages__img" src="./img/advantage_delivery_img.svg" alt="delivery image">
-                <h3 class="advantages__heading">Free Delivery</h3>
-                <p class="advantages__text">
-                    Worldwide delivery on&nbsp;all. Authorit tively morph next-generation innov tion with extensive
-                    models.
-                </p>
-            </article>
-            <article class="advantages__item">
-                <img class="advantages__img" src="./img/advantage_discount_img.svg" alt="discount image">
-                <h3 class="advantages__heading">Sales &amp;&nbsp;discounts</h3>
-                <p class="advantages__text">
-                    Worldwide delivery on&nbsp;all. Authorit tively morph next-generation innov tion with extensive
-                    models.
-                </p>
-            </article>
-            <article class="advantages__item">
-                <img class="advantages__img" src="./img/advantage_quality_img.svg" alt="quality image">
-                <h3 class="advantages__heading">Quality assurance</h3>
-                <p class="advantages__text">
-                    Worldwide delivery on&nbsp;all. Authorit tively morph next-generation innov tion with extensive
-                    models.
-                </p>
-            </article>
-
-        </div>
         <footer class="footer">
             <section class="footer__top over__lay">
                 <div class="top__footer__content center">
                     <figure class="footer_feedback">
                         <img class="foto_footer" src="./img/face.png" alt="Girl face">
                         <figcaption class="feedback">&quot;Vestibulum quis porttitor dui! Quisque viverra nunc&nbsp;mi,
-                            <i>a&nbsp;pulvinar purus condimentum&quot;</i>
+                            <i>pulvinar purus condimentum&quot;</i>
                         </figcaption>
                     </figure>
                     <form class="footer__form" action="#">
                         <h3 class="footer_title">SUBSCRIBE</h3>
                         <h4 class="footer_subtitle">FOR OUR NEWLETTER AND PROMOTION</h4>
                         <div class="email_button">
-                            <input class="input__email" required type="email" placeholder="Enter Your Email">
+                            <input class="input__email" required autofocus type="email" placeholder="Enter Your Email">
                             <button class="button__subscribe" type="submit">Subscribe</button>
                         </div>
                     </form>
@@ -321,7 +275,6 @@
 
             </section>
         </footer>
-
 
 
     </div>

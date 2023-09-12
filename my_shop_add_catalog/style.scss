@@ -1,9 +1,10 @@
 @import 'vars';
 @import 'mixins';
 @import 'header';
-@import 'footer';
 @import 'product';
 @import 'catalog';
+@import 'cart';
+@import 'footer';
 
 
 
@@ -151,6 +152,7 @@ body {
 .product {
     background: rgba(248, 248, 248, 1);
     max-width: 360px;
+    position: relative;
     @include flex_style($flexDirection: column);
 
     &__content {
@@ -203,6 +205,10 @@ body {
 
     &__img {
         margin-bottom: 28px;
+    }
+
+    &__img:hover {
+        filter: drop-shadow(5px -5px 10px $colorSitePink);
     }
 
     &__heading {
@@ -344,8 +350,9 @@ body {
     .advantages {
         @include flex_style($flexDirection: column, $gap: 46px);
         padding-bottom: 81px;
-        &__text{
-            max-width: 348px;    
+
+        &__text {
+            max-width: 348px;
         }
     }
 }
