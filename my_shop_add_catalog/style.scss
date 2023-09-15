@@ -4,6 +4,7 @@
 @import 'product';
 @import 'catalog';
 @import 'cart';
+@import 'registration';
 @import 'footer';
 
 
@@ -149,11 +150,44 @@ body {
     }
 }
 
+
+
+
 .product {
     background: rgba(248, 248, 248, 1);
     max-width: 360px;
     position: relative;
-    @include flex_style($flexDirection: column);
+    @include flex_style($flexDirection: column, $justifyContent: flex-start);
+
+   &__image{
+        display: block;
+        position: relative;
+        max-height: 420px; /*можно ли так делать, а то ссылка вылезала на 3 пикселя*/
+    }
+    .mask{
+        position: absolute;
+        top: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(58, 56, 56);
+        opacity: 0;
+        transition: all 0.3s;
+        @include flex_style($justifyContent: center);
+        &__box{
+            width: 139px;
+            height: 44px;
+            border: 1px solid rgba(255, 255, 255, 1);
+            @include flex_style($gap: 11px, $justifyContent: center);
+        }
+        &__text{
+            @include font_style($fontWeight: 400);
+            color: #ffffff;
+        }
+    }
+    .mask:hover{
+    opacity: 0.86;
+    }
 
     &__content {
         padding: 25px 16px;
