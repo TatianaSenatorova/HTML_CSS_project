@@ -82,7 +82,7 @@
 
 .product_info {
     margin-top: -65px;
-    margin-bottom: 129px;
+   
  
     text-align: center;
     @include flex_style($justifyContent: center, $flexDirection: column);
@@ -161,7 +161,8 @@
 }
 
 .page_products {
-    margin-bottom: 148px;
+    padding-top: 129px;
+    padding-bottom: 148px;
 
     &_box {
         @include flex_style();

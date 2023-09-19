@@ -82,10 +82,10 @@ summary::-webkit-details-marker {
 
 .filter_sort {
     position: relative;
-    height: 132px;
+    height: 82px;
     padding-top: 39px;
     @include flex_style($justifyContent: start, $flexWrap: nowrap, $alignItems: flex-start);
-    padding-top: 51px;
+    padding-top: 28px;
     gap: 30px;
 }
 
@@ -156,5 +156,21 @@ summary::-webkit-details-marker {
     .page-link:hover {
         color: $colorSitePink;
     }
- 
+
+}
+
+@media(max-width: 1024px) {
+    .center {
+        /*оставляем отступы по 16px с каждой стороны: 768-32=736/2=368*/
+        padding-left: calc(50% - 368px);
+        padding-right: calc(50% - 368px);
+    }
+
+    .product_remove {
+      display: none;
+    }
+
+    .filter_sort{
+        @include flex_style($justifyContent:space-between, $alignItems: flex-start);
+    }
 }

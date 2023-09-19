@@ -17,11 +17,11 @@
 
     .personal-info {
         @include flex_style($gap: 21px);
-        margin-bottom: 33px;
+
     }
 
     .content-registration {
-        @include flex_style($alignItems: flex-start);
+        @include flex_style($alignItems: flex-start, $flexWrap: nowrap, $gap: 22px);
         padding-top: 64px;
         padding-bottom: 96px;
 
@@ -92,10 +92,11 @@
             background-color: $colorSitePink;
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
         }
-        .password-hint{
+
+        .password-hint {
             color: $colorLightGrey;
             @include font_style();
-          
+
         }
 
         &__button {
@@ -109,13 +110,16 @@
             transition: all 0.3s;
             cursor: pointer;
         }
+
         .button-text {
             padding-right: 20px;
         }
+
         &__button:hover {
             background: #fff;
             color: $colorSitePink;
         }
+
         &__button:hover path {
             fill: $colorSitePink;
         }
@@ -125,7 +129,7 @@
 }
 
 .benefits {
-    width: 57.19%;
+    max-width: 57.19%;
     @include flex_style($flexDirection: column, $gap: 20px, $alignItems: flex-start);
 
     &__title,
@@ -150,6 +154,12 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .content-registration {
+        padding-top: 40px;
+    }
 
-
-
+    .benefits__title,  .benefits__text, .list-space{
+        @include font_style($fontSize: 16px);
+    }
+}
