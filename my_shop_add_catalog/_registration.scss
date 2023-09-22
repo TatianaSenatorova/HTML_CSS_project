@@ -51,6 +51,7 @@
         .box-radiobuttons {
             margin-top: 33.5px;
             @include flex_style($gap: 20px, $justifyContent: flex-start);
+            margin-bottom: 33px;
         }
 
         &__radio {
@@ -155,11 +156,48 @@
 }
 
 @media (max-width: 1024px) {
+    .center {
+        /*оставляем отступы по 16px с каждой стороны: 768-32=736/2=368*/
+        padding-left: calc(50% - 368px);
+        padding-right: calc(50% - 368px);
+    }
+
     .content-registration {
         padding-top: 40px;
     }
 
-    .benefits__title,  .benefits__text, .list-space{
+    .benefits__title,
+    .benefits__text,
+    .list-space {
         @include font_style($fontSize: 16px);
+    }
+}
+
+@media(max-width: 767px) {
+    .center {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .regisration {
+        &__heading {
+            text-align: center;
+        }
+
+        .content-registration {
+            @include flex_style($flexDirection: column, $gap: 40px);
+            padding-top: 40px;
+
+            .password-hint {
+                font-size: 13px;
+            }
+        }
+
+        .benefits {
+            max-width: 360px;
+
+
+        }
+
     }
 }

@@ -127,6 +127,7 @@ summary::-webkit-details-marker {
         position: absolute;
         left: -9px;
         top: 20px;
+        z-index: 2;
     }
 
 }
@@ -167,10 +168,60 @@ summary::-webkit-details-marker {
     }
 
     .product_remove {
-      display: none;
+        display: none;
     }
 
-    .filter_sort{
-        @include flex_style($justifyContent:space-between, $alignItems: flex-start);
+    .filter_sort {
+        @include flex_style($justifyContent: space-between, $alignItems: flex-start);
+    }
+}
+
+@media(max-width: 767px) {
+    .center {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .product_top_box {
+        @include flex_style($flexDirection: column, $justifyContent: start, $gap: 32px);
+        padding-top: 24px;
+    }
+    .product-box_catalog{
+        padding-bottom: 77px;
+    }
+
+
+    .sort {
+        position: absolute;
+        right: 8px;
+        top: 24px;
+        @include flex_style($flexWrap: nowrap, $gap: 23px);
+
+        &__heading {
+            @include font_style($fontSize: 12px, $fontWeight: 400);
+        }
+       
+       
+
+    }
+
+       .filter {
+        width: 100px; //уменьшаем, чтобы не мешал открыть size
+
+        &[open] {
+            width: 360px; //возвращаем ширину, чтобы корретно при открытии все отразилось
+        }
+
+        &__heading {
+            display: none;
+        }
+
+        &__summary {
+            padding-left: 0;
+
+        }
+
+        &_sort {
+            padding-top: 24px;
+        }
     }
 }

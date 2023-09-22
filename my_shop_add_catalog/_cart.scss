@@ -58,10 +58,17 @@
             color: $colorGrey;
             @include font_style($fontSize: 18px, $fontWeight: 400);
             outline: none;
+           
+        }
+        &_quantity:hover{
+            border: 1px solid $colorSitePink;
+        box-shadow: 0 0 10px $colorSitePink;
         }
 
+
         &_img {
-            max-height: 306px;
+            max-width: 100%;
+            vertical-align: middle;
             object-fit: cover;
         }
 
@@ -128,7 +135,7 @@
     }
 
     &_item:hover {
-        transform: scale(1.03);
+        transform: scale(1.02);
     }
 
     &_buttons {
@@ -137,7 +144,7 @@
 
     &_button {
         font-family: 'Lato', sans-serif;
-        /*почему-то к кнопке не применился шрифт*/
+        
         padding: 15.5px 40px;
         min-height: 50px;
         border: 1px solid #A4A4A4;
@@ -170,6 +177,11 @@
             border: 1px solid #A4A4A4;
             outline: none;
         }
+        &_input:hover{
+         border: 1px solid $colorSitePink;
+            box-shadow: 0 0 10px $colorSitePink;   
+        }
+        
 
         &_dicount {
             min-height: 35px;
@@ -227,7 +239,7 @@
             color: white;
             border: 1px solid $colorSitePink;
             transition: all 0.3s;
-            align-self: center;
+            text-align: center;
         }
 
         &_button:hover {
@@ -239,6 +251,11 @@
 }
 
 @media (max-width: 1024px) {
+    .center {
+        /*оставляем отступы по 16px с каждой стороны: 768-32=736/2=368*/
+        padding-left: calc(50% - 368px);
+        padding-right: calc(50% - 368px);
+    }
     .cart {
         &__content {
             padding-top: 59px;
@@ -250,29 +267,120 @@
 
             &_left {
                 width: 100%;
-               
+
             }
-            &_right{
+
+            &_right {
                 width: 100%;
                 padding-top: 64px;
                 @include flex_style($alignItems: flex-start);
             }
 
             &_items {
-                    margin-bottom: 62px;
-                }
-                &_check, &_address{
-                    width: 360px;
-                }
-                &_check{
-                    margin-top: 39px;
-                }&_address{
-                    margin-bottom: 0;
-                }
-                
-                
-              }
+                margin-bottom: 62px;
+            }
+
+            &_check,
+            &_address {
+                width: 360px;
+            }
+
+            &_check {
+                margin-top: 39px;
+            }
+
+            &_address {
+                margin-bottom: 0;
+            }
 
 
+        }
+
+
+    }
+}
+
+@media (max-width: 767px) {
+    .center {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .cart {
+        &__top_title {
+            padding-top: 50px;
+            @include flex_style($justifyContent: center, $alignItems: flex-start);
+        }
+
+        &__content {
+            padding-top: 39px;
+            padding-bottom: 96px;
+        }
+
+        &__form {
+            &_items {
+                margin-bottom: 30px;
+                @include flex_style($flexDirection: column, $alignItems: center, $gap: 32px);
+            }
+            &_right {
+                padding-top: 48px;
+                @include flex_style($flexDirection: column, $alignItems: center, $justifyContent: center);
+            }
+
+            &_left {
+                max-width: 358px;
+            }
+            &_img {
+                height: 188px;
+            }
+
+            &_item {
+                &_content {
+                    padding: 14px 17px;
+                }
+
+                &_img {
+                    height: 100%;
+                }
+
+                .close-item {
+                    width: 10px;
+                    height: 11px;
+                }
+
+                &_content_title,
+                &_content_firm {
+                    font-size: 16px;
+                }
+
+                &_content_title {
+                    margin-bottom: 25px;
+                }
+
+                &_content_info {
+                    font-size: 14px;
+                    margin-bottom: 4px;
+                }
+
+                &_quantity {
+                    width: 25px;
+                    height: 15px;
+                    font-size: 10px;
+                }
+            }
+
+            &_button {
+                font-size: 12px;
+                text-transform: lowercase;
+                padding: 9px 16px;
+                min-height: 33px;
+
+                &:first-letter {
+                    text-transform: capitalize;
+                }
+            }
+
+           
+        }
     }
 }

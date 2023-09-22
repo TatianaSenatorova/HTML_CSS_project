@@ -1,4 +1,3 @@
-
 @import 'mixins';
 @import 'vars';
 
@@ -42,10 +41,18 @@
     @include flex_style($justifyContent: space-evenly, $flexWrap: nowrap);
 }
 
+
+
+.img-carousel {
+    max-width: 61%;
+    position: relative;
+    overflow: hidden;
+}
+
 .products_carousel {
     background: #F7F7F7;
     margin: 0 auto;
- 
+
     z-index: 0;
 
 
@@ -55,12 +62,13 @@
         width: 100%;
     }
 
-    &_item {
-       max-width: 597px;
-     
-    }
+    // &_item {
+    //    max-width: 597px;
+
+    // }
 
     &_arrow_box {
+        display: inline-block;
         width: 47px;
         height: 47px;
         background: #2A2A2A26;
@@ -70,29 +78,30 @@
         @extend %absolute_center;
     }
 
-    &_arrow:hover path{
+    &_arrow:hover path {
         fill: $colorSitePink;
     }
 }
 
 .d-block {
-    
+
     z-index: 0;
 }
 
 .product_info {
     margin-top: -65px;
-   
- 
+    padding-bottom: 64px;
+
+
     text-align: center;
     @include flex_style($justifyContent: center, $flexDirection: column);
     z-index: 999;
     background: white;
 
-   &_container{
-    max-width: 1140px;
-    margin: 0 auto;
-   }
+    &_container {
+        max-width: 1140px;
+        margin: 0 auto;
+    }
 
     &_heading {
         color: $colorSitePink;
@@ -160,6 +169,10 @@
     color: white;
 }
 
+.product-box_page-product {
+    padding-top: 129px;
+}
+
 .page_products {
     padding-top: 129px;
     padding-bottom: 148px;
@@ -172,5 +185,75 @@
             padding: 25px 16px 20px 16px;
 
         }
+    }
+}
+
+@media (max-width: 1140px) {
+    .product-remove_catalog {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .center {
+        /*оставляем отступы по 16px с каждой стороны: 768-32=736/2=368*/
+        padding-left: calc(50% - 368px);
+        padding-right: calc(50% - 368px);
+    }
+
+
+    .products_carousel_box {
+        padding-bottom: 29px;
+    }
+
+    .product_info {
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .center {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .products_carousel_box {
+        padding-top: 85px;
+        padding-bottom: 85px;
+    }
+
+    .img-carousel {
+        max-width: 100%;
+    }
+
+    .product_info {
+        &_motto {
+            margin-bottom: 32px;
+        }
+
+        &_price {
+            margin-bottom: 81px;
+        }
+    }
+
+    .select_group {
+        margin-bottom: 64px;
+
+        &_btn {
+            font-size: 10px;
+        }
+    }
+
+    .product-box {
+        padding-top: 64px;
+    }
+
+    .product-remove_catalog {
+        display: block;
+    }
+
+    .product-remove_mobile {
+        display: none;
     }
 }
